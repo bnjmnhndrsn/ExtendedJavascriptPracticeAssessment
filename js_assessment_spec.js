@@ -178,3 +178,21 @@ describe("factorialsRec", function() {
     expect(Assessment.factorialsRec(5)).toEqual([1, 2, 6, 24, 120]);
   });
 });
+
+describe("dups", function() {
+  it("solves a simple example", function() {
+    expect(Assessment.dups([1, 3, 0, 1])).toEqual({ 1 => [0, 3] });
+  });
+
+  it("finds two dups", function () {
+    expect(Assessment.dups([1, 3, 0, 3, 1])).toEqual({ 1 => [0, 4], 3 => [1, 3] });
+  });
+
+  it("finds multi-dups", function () {
+    expect(Assessment.dups([1, 3, 4, 3, 0, 3])).toEqual({ 3 => [1, 3, 5] });
+  });
+  
+  it("returns {} when no dups found", function () {
+    expect(Assessment.dups([1, 3, 4, 5])).toEqual({});
+  });
+});
