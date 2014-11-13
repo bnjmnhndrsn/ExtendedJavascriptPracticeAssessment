@@ -196,3 +196,17 @@ describe("dups", function() {
     expect(Assessment.dups([1, 3, 4, 5])).toEqual({});
   });
 });
+
+describe("fibsRec", function() {
+  it("returns first fib number", function() {
+    expect(Assessment.fibsRec(1)).toEqual([0]);
+  });
+
+ it("returns first two fib numbers", function() {
+    expect(Assessment.fibsRec(2)).toEqual([0, 1]);
+  });
+  
+  it("returns first six fib numbers", function() {
+    expect(Assessment.fibsRec(6)).toEqual([0, 1, 1, 2, 3, 5]);
+  });
+});
