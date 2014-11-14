@@ -202,3 +202,33 @@ describe("addToTwelve", function() {
     expect(Assessment.addToTwelve([1, 1, 2, 3, 4, 5, 5, 4, 5, 6, 7, 6, 5, 6])).toBe(false);
   });
 });
+
+describe("Function.prototype.curry", function () {
+
+  var summer, sally, markov, curie;
+
+  beforeEach(function () {
+    summer = function summer () {
+      var s = 0;
+      for (var i = 0; i < arguments.length; i++) {
+        s+= arguments[i];
+      }
+
+      return s;
+    };
+
+  });
+
+  it("should return a function on first bind", function () {
+    expect(typeof(summer.curry(2))).toEqual("function");
+  });
+
+  it("should return a function before the number of arguments are met", function () {
+    expect(typeof(summer.curry(2)(1))).toEqual("function");
+  });
+
+  it("should the result after the number of arguments are met", function () {
+    expect( summer.curry(3)(1)(4)(5) ).toEqual(10);
+  });
+
+});
