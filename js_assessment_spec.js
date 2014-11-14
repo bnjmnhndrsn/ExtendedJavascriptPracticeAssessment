@@ -174,7 +174,7 @@ describe("factorialsRec", function() {
     expect(Assessment.factorialsRec(2)).toEqual([1, 2]);
   });
 
-  it("should sort an array with 1 element", function () {
+  it("returns first five factorial numbers", function () {
     expect(Assessment.factorialsRec(5)).toEqual([1, 2, 6, 24, 120]);
   });
 });
