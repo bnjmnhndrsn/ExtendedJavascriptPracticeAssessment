@@ -210,3 +210,13 @@ describe("fibsRec", function() {
     expect(Assessment.fibsRec(6)).toEqual([0, 1, 1, 2, 3, 5]);
   });
 });
+
+describe("addToTwelve", function() {
+  it("returns true if two adjacent numbers add to twelve", function() {
+    expect(Assessment.addToTwelve([1, 1, 2, 3, 4, 5, 7, 4, 5, 6, 7, 6, 5, 6])).toEqual(true);
+  });
+
+ it("returns false if target doesn't occur", function() {
+    expect(Assessment.addToTwelve([1, 1, 2, 3, 4, 5, 5, 4, 5, 6, 7, 6, 5, 6])).toEqual(false);
+  });
+});
