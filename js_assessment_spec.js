@@ -213,10 +213,10 @@ describe("fibsRec", function() {
 
 describe("addToTwelve", function() {
   it("returns true if two adjacent numbers add to twelve", function() {
-    expect(Assessment.addToTwelve([1, 1, 2, 3, 4, 5, 7, 4, 5, 6, 7, 6, 5, 6])).toEqual(true);
+    expect(Assessment.addToTwelve([1, 1, 2, 3, 4, 5, 7, 4, 5, 6, 7, 6, 5, 6])).toBe(true);
   });
 
  it("returns false if target doesn't occur", function() {
-    expect(Assessment.addToTwelve([1, 1, 2, 3, 4, 5, 5, 4, 5, 6, 7, 6, 5, 6])).toEqual(false);
+    expect(Assessment.addToTwelve([1, 1, 2, 3, 4, 5, 5, 4, 5, 6, 7, 6, 5, 6])).toBe(false);
   });
 });
