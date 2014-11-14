@@ -232,3 +232,17 @@ describe("Function.prototype.curry", function () {
   });
 
 });
+
+describe("binarySearch", function() {
+  it("returns -1 if element not present", function() {
+    expect([2, 4, 6, 8, 10].binarySearch(7)).toEqual(-1);
+  });
+
+ it("returns correctly for element in sequential array", function() {
+    expect([1, 2, 3, 4, 5].binarySearch(2)).toEqual(1);
+  });
+  
+  it("returns correctly for element in nonsequential array", function() {
+     expect([1, 6, 12, 43, 500].binarySearch(500)).toEqual(4);
+   });
+});
